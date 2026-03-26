@@ -1,0 +1,105 @@
+/* =========================================
+   PROBLEM SECTION
+========================================= */
+
+.problem-section {
+  padding: var(--space-20) 0;
+  background: var(--color-bg);
+}
+
+/* Header */
+.problem-header {
+  margin-bottom: var(--space-12);
+}
+
+/* Subtext */
+.section-subtext {
+  max-width: 640px;
+  margin: var(--space-3) auto 0;
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  color: var(--color-text-secondary);
+}
+
+/* =========================================
+   PROBLEM CARD
+========================================= */
+
+.problem-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  height: 100%;
+}
+
+/* Hover Effect */
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+/* =========================================
+   ICON BOX
+========================================= */
+
+.icon-box {
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  display: inline-block;
+  transition: var(--transition-base);
+}
+
+/* Icon hover */
+.problem-card:hover .icon-box {
+  transform: scale(1.1);
+  color: var(--color-accent-hover);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.problem-title {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* =========================================
+   GRID SPACING (BOOTSTRAP OVERRIDE)
+========================================= */
+
+.row.g-4 {
+  --bs-gutter-x: var(--space-6);
+  --bs-gutter-y: var(--space-6);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .problem-section {
+    padding: var(--space-16) 0;
+  }
+
+  .problem-header {
+    margin-bottom: var(--space-10);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .problem-title {
+    font-size: var(--text-sm);
+  }
+}

@@ -1,0 +1,126 @@
+/* =========================================
+   SOLUTION SECTION
+========================================= */
+
+.solution-section {
+  padding: var(--space-20) 0;
+  background: var(--color-bg-alt);
+}
+
+/* Header */
+.solution-header {
+  margin-bottom: var(--space-12);
+}
+
+/* Subtext */
+.section-subtext {
+  max-width: 640px;
+  margin: var(--space-3) auto 0;
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  color: var(--color-text-secondary);
+}
+
+/* =========================================
+   SOLUTION CARD
+========================================= */
+
+.solution-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+/* Hover */
+.solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+/* =========================================
+   ICON BOX (UPGRADED)
+========================================= */
+
+.solution-card .icon-box {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-full);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+
+  font-size: var(--text-lg);
+  transition: var(--transition-base);
+}
+
+/* Hover effect */
+.solution-card:hover .icon-box {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  transform: scale(1.05);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.solution-title {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.solution-text {
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* =========================================
+   GRID SPACING
+========================================= */
+
+.row.g-4 {
+  --bs-gutter-x: var(--space-6);
+  --bs-gutter-y: var(--space-6);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .solution-section {
+    padding: var(--space-16) 0;
+  }
+
+  .solution-header {
+    margin-bottom: var(--space-10);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .solution-title {
+    font-size: var(--text-sm);
+  }
+}

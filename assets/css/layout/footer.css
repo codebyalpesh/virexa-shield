@@ -1,0 +1,224 @@
+/* =========================================
+   FOOTER BASE
+========================================= */
+
+.footer {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+  background: var(--color-gray-900);
+  color: var(--color-gray-300);
+}
+
+.footer-main {
+  margin-bottom: var(--space-12);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-logo {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-surface);
+  margin-bottom: var(--space-3);
+}
+
+.footer-text {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  margin-bottom: var(--space-4);
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-gray-800);
+  color: var(--color-gray-300);
+
+  transition: var(--transition-base);
+}
+
+.social-link:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-200);
+  margin-bottom: var(--space-2);
+}
+
+.footer-link {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+/* =========================================
+   NEWSLETTER (FIXED + PREMIUM)
+========================================= */
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Container */
+.newsletter-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  background: var(--color-gray-800);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-full);
+
+  padding: var(--space-1);
+  transition: var(--transition-base);
+}
+
+/* Focus state (IMPORTANT UX) */
+.newsletter-box:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-disabled);
+}
+
+/* Input */
+.newsletter-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-surface);
+
+  min-width: 0; /* prevents overflow bug */
+}
+
+/* Placeholder */
+.newsletter-input::placeholder {
+  color: var(--color-gray-500);
+}
+
+/* Button */
+.newsletter-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+/* Hover */
+.newsletter-btn:hover {
+  background: var(--color-primary-hover);
+  transform: scale(1.05);
+}
+
+/* Active */
+.newsletter-btn:active {
+  background: var(--color-primary-active);
+  transform: scale(0.98);
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  border-top: 1px solid var(--color-gray-800);
+  padding-top: var(--space-6);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.footer-copy {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+.footer-love {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .footer-main {
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-main {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

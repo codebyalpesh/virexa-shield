@@ -1,0 +1,139 @@
+/* =========================
+   REVEAL
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   SCROLL TOP BUTTON
+========================= */
+
+/* =========================================
+   SCROLL TOP BUTTON
+========================================= */
+
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-primary);
+  color: var(--color-surface);
+
+  border: none;
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
+  box-shadow: var(--shadow-lg);
+
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(12px) scale(0.95);
+
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+/* =========================================
+   SHOW STATE
+========================================= */
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.scroll-top:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   ACTIVE (PRESS FEEDBACK)
+========================================= */
+
+.scroll-top:active {
+  background: var(--color-primary-active);
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.scroll-top i {
+  font-size: var(--text-lg);
+  line-height: 1;
+
+  transition: transform var(--transition-fast);
+}
+
+/* Icon hover lift */
+.scroll-top:hover i {
+  transform: translateY(-3px);
+}
+
+/* Icon press */
+.scroll-top:active i {
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   FOCUS (ACCESSIBILITY)
+========================================= */
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary-active);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .scroll-top {
+    bottom: var(--space-4);
+    right: var(--space-4);
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-top i {
+    font-size: var(--text-base);
+  }
+}

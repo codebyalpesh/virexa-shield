@@ -1,0 +1,282 @@
+/* =========================================
+   ACCESSIBLE FOCUS SYSTEM
+========================================= */
+
+:focus,
+:focus-visible {
+  outline: var(--space-1) solid var(--color-primary);
+  outline-offset: var(--space-1);
+  box-shadow: none;
+}
+
+/* =========================================
+   BUTTONS (SOLID)
+========================================= */
+
+.btn {
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  transition: var(--transition-base);
+  border: var(--space-1) solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  background: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+}
+
+.btn-primary:disabled {
+  background: var(--color-primary-disabled);
+  border-color: var(--color-primary-disabled);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn-secondary:active,
+.btn-secondary.active {
+  background: var(--color-secondary-active);
+}
+
+.btn-secondary:disabled {
+  background: var(--color-secondary-disabled);
+}
+
+/* =========================================
+   BUTTONS (OUTLINE)
+========================================= */
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+  color: var(--color-surface);
+}
+
+.btn-outline-primary:disabled {
+  color: var(--color-primary-disabled);
+  border-color: var(--color-primary-disabled);
+}
+
+/* =========================================
+   FORMS
+========================================= */
+
+.form-control,
+.form-select {
+  border-radius: var(--radius-md);
+  border: var(--space-1) solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: var(--transition-base);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  outline: var(--space-1) solid var(--color-primary);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar .nav-link {
+  color: var(--color-text-secondary);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.dropdown-menu {
+  border-radius: var(--radius-md);
+  border: var(--space-1) solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: var(--color-primary-disabled);
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  border-radius: var(--radius-lg);
+  border: var(--space-1) solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================
+   ALERT
+========================================= */
+
+.alert {
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+.alert-primary {
+  background: var(--color-primary-disabled);
+  color: var(--color-primary-active);
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.badge {
+  border-radius: var(--radius-full);
+  font-weight: var(--font-medium);
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-content {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table {
+  color: var(--color-text-primary);
+}
+
+.table thead {
+  background: var(--color-bg-alt);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.page-link {
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+}
+
+.page-link:hover {
+  background: var(--color-primary-disabled);
+}
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress {
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  background: var(--color-primary);
+}
+
+/* =========================================
+   LIST GROUP
+========================================= */
+
+.list-group-item {
+  border: var(--space-1) solid var(--color-border);
+}
+
+.list-group-item.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* =========================================
+   ACCORDION
+========================================= */
+
+.accordion-button {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--color-primary-disabled);
+}
+
+/* =========================================
+   TOOLTIP
+========================================= */
+
+.tooltip-inner {
+  background: var(--color-gray-900);
+  color: var(--color-surface);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--space-3);
+  }
+
+  .card {
+    margin-bottom: var(--space-4);
+  }
+}

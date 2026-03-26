@@ -1,0 +1,292 @@
+/* =========================================
+   SMART SCORE COLORS
+========================================= */
+
+/* Default (fallback) */
+.score-value {
+  color: var(--color-primary);
+}
+
+/* Dynamic States */
+.score-low {
+  color: var(--color-error);
+}
+
+.score-medium {
+  color: var(--color-warning);
+}
+
+.score-high {
+  color: var(--color-success);
+}
+
+/* Ring Colors */
+.progress-ring-fill.score-low {
+  stroke: var(--color-error);
+}
+
+.progress-ring-fill.score-medium {
+  stroke: var(--color-warning);
+}
+
+.progress-ring-fill.score-high {
+  stroke: var(--color-success);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  position: relative;
+  padding: var(--space-24) 0;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg),
+    var(--color-bg-alt)
+  );
+  overflow: hidden;
+}
+
+/* Glow Layer */
+.hero-bg-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--color-primary-disabled),
+    transparent 70%
+  );
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Title */
+.hero-title {
+  font-family: var(--font-primary);
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-5xl);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Gradient Highlight */
+.hero-highlight {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* =========================================
+   HERO ACTIONS
+========================================= */
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+/* =========================================
+   BUTTON SYSTEM (FINAL)
+========================================= */
+
+.btn-hero {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.btn-hero:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-hero:active {
+  background: var(--color-primary-active);
+  transform: translateY(0);
+}
+
+/* Outline Button */
+.btn-hero-outline {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-base);
+}
+
+.btn-hero-outline:hover {
+  background: var(--color-gray-100);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   SCORE BOX (GLASS + LAYOUT)
+========================================= */
+
+.score-box {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+/* Glass Effect */
+.score-glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border-light);
+}
+
+/* =========================================
+   SCORE RING
+========================================= */
+
+.score-ring {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: var(--space-4) 0;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+/* Background */
+.progress-ring-bg {
+  fill: transparent;
+  stroke: var(--color-gray-200);
+  stroke-width: 10;
+}
+
+/* Progress */
+.progress-ring-fill {
+  fill: transparent;
+  stroke: var(--color-primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+/* Center Score */
+.score-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
+
+/* =========================================
+   FLOAT ANIMATION
+========================================= */
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    padding: var(--space-16) 0;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
+    line-height: var(--leading-3xl);
+  }
+
+  .score-box {
+    margin-top: var(--space-12);
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .hero-title {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-2xl);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero,
+  .btn-hero-outline {
+    width: 100%;
+  }
+}

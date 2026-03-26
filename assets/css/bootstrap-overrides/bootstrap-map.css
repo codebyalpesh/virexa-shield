@@ -1,0 +1,117 @@
+/* =========================================
+   BOOTSTRAP TOKEN MAPPING LAYER
+   (STRICT: NO HARDCODED VALUES)
+========================================= */
+
+:root {
+
+  /* =========================
+     COLORS
+  ========================= */
+
+  --bs-primary: var(--color-primary);
+  --bs-secondary: var(--color-secondary);
+  --bs-success: var(--color-success);
+  --bs-danger: var(--color-error);
+  --bs-warning: var(--color-warning);
+  --bs-info: var(--color-info);
+
+  --bs-light: var(--color-gray-100);
+  --bs-dark: var(--color-gray-900);
+
+  /* RGB (fallback approximation using same token) */
+  --bs-primary-rgb: var(--color-primary);
+  --bs-secondary-rgb: var(--color-secondary);
+  --bs-success-rgb: var(--color-success);
+  --bs-danger-rgb: var(--color-error);
+  --bs-warning-rgb: var(--color-warning);
+  --bs-info-rgb: var(--color-info);
+
+  /* Background subtle */
+  --bs-primary-bg-subtle: var(--color-primary-disabled);
+  --bs-secondary-bg-subtle: var(--color-secondary-disabled);
+  --bs-success-bg-subtle: var(--color-primary-disabled);
+  --bs-danger-bg-subtle: var(--color-accent-disabled);
+  --bs-warning-bg-subtle: var(--color-warning);
+  --bs-info-bg-subtle: var(--color-info);
+
+  /* Text */
+  --bs-body-color: var(--color-text-primary);
+  --bs-secondary-color: var(--color-text-secondary);
+  --bs-tertiary-color: var(--color-text-muted);
+
+  /* Background */
+  --bs-body-bg: var(--color-bg);
+  --bs-body-bg-rgb: var(--color-bg);
+
+  /* Border */
+  --bs-border-color: var(--color-border);
+  --bs-border-color-translucent: var(--color-border-light);
+
+  /* Link */
+  --bs-link-color: var(--color-primary);
+  --bs-link-hover-color: var(--color-primary-hover);
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  --bs-font-sans-serif: var(--font-primary);
+  --bs-font-monospace: var(--font-secondary);
+
+  --bs-body-font-size: var(--text-base);
+  --bs-body-font-weight: var(--font-regular);
+  --bs-body-line-height: var(--leading-base);
+
+  /* Headings */
+  --bs-heading-font-family: var(--font-primary);
+  --bs-heading-font-weight: var(--font-bold);
+
+  --bs-h1-font-size: var(--text-5xl);
+  --bs-h2-font-size: var(--text-4xl);
+  --bs-h3-font-size: var(--text-3xl);
+  --bs-h4-font-size: var(--text-2xl);
+  --bs-h5-font-size: var(--text-xl);
+  --bs-h6-font-size: var(--text-lg);
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --bs-spacer: var(--space-4);
+
+  /* =========================
+     BORDER
+  ========================= */
+
+  --bs-border-width: var(--space-1);
+  --bs-border-radius: var(--radius-md);
+  --bs-border-radius-sm: var(--radius-sm);
+  --bs-border-radius-lg: var(--radius-lg);
+  --bs-border-radius-pill: var(--radius-full);
+
+  /* =========================
+     SHADOW
+  ========================= */
+
+  --bs-box-shadow: var(--shadow-md);
+  --bs-box-shadow-sm: var(--shadow-sm);
+  --bs-box-shadow-lg: var(--shadow-lg);
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --bs-transition: var(--transition-base);
+
+  /* =========================
+     Z-INDEX
+  ========================= */
+
+  --bs-dropdown-zindex: var(--z-dropdown);
+  --bs-sticky-zindex: var(--z-sticky);
+  --bs-fixed-zindex: var(--z-fixed);
+  --bs-modal-zindex: var(--z-modal);
+  --bs-tooltip-zindex: var(--z-tooltip);
+
+}

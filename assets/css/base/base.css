@@ -1,0 +1,121 @@
+/* =========================================================
+   base.css
+========================================================= */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  padding-top: 57px;
+}
+
+a {
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   CONTAINER BALANCE
+========================================= */
+
+.container {
+  max-width: 1140px;
+}
+
+/* Better vertical rhythm */
+.container + .container {
+  margin-top: var(--space-12);
+}
+
+/* =========================================
+   GLOBAL SECTION SYSTEM
+========================================= */
+
+section {
+  position: relative;
+  padding: var(--space-20) 0;
+}
+
+/* Alternating backgrounds for flow */
+section:nth-of-type(even) {
+  background: var(--color-bg-alt);
+}
+
+section:nth-of-type(odd) {
+  background: var(--color-bg);
+}
+
+/* Smooth visual separation */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-border-light);
+}
+
+/* Remove last divider */
+section:last-of-type::after {
+  display: none;
+}
+
+/* =========================================
+   UNIVERSAL CARD BASE
+========================================= */
+
+.card-ui {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+/* Shared hover behavior */
+.card-ui:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   SUBTLE GLOW SYSTEM
+========================================= */
+
+.glow-accent {
+  position: relative;
+}
+
+.glow-accent::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle,
+    var(--color-primary-disabled),
+    transparent 70%
+  );
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* =========================================
+   GLOBAL BUTTON FEEL
+========================================= */
+
+.btn {
+  transition: var(--transition-base);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
